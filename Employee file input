@@ -1,0 +1,36 @@
+<!-- Author: Jason Strang
+Course: Ist 239
+StartDate: 3/23/21-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 3 Assignment</title>
+	<script>
+		var firstName = prompt("What is your first name?", "");
+		var lastName = prompt("What is your last name?", "");
+		var hourlyWage = prompt("What is your hourly wage?", "");
+		var jobId = "B0123456";
+		var jobTitle = "Programmer";
+	</script>
+</head>
+<body  style="background-color:rgb(50,205,50)"> <!-- light green -->
+
+	<script type="text/javascript">
+		var weeklyHours = 40;
+		var beginEffect = "<strong>";
+		var endEffect = "</strong>";
+		var weeklyPay = hourlyWage * weeklyHours;
+		var beginPara = "<p>";
+		var endPara = "</p>";
+		var linkTag = "<a href=\"https://www.tridenttech.edu/\">Trident Technical College</a>";
+
+		document.write(beginEffect + "First Name: " + endEffect + firstName);
+		document.write(beginEffect + "<br>Last Name: " + endEffect + lastName);
+		document.write(beginEffect + "<br>Job Title: " + endEffect + jobTitle);
+		document.write(beginEffect + "<br>Job ID: " + endEffect + jobId);
+		document.write(beginEffect + "<br>Weekly Pay: " + endEffect + weeklyPay.toFixed(2));
+		document.write("");
+		document.write(beginPara + linkTag + endPara);
+	</script>
+</body>
+</html>
