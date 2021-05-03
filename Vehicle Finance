@@ -1,0 +1,45 @@
+<!-- Author: Jason Strang
+StartDate: -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 6 assignemt 2</title>
+	<script type="text/javascript">
+		var vehiclePrice= parseFloat(prompt("Please enter vehichle price. ", ""));
+		var downPaymentAmount = parseFloat(prompt("Please enter down payment amount. ", ""));
+		var annualInterestRate = prompt("Please enter annual loan interest rate ", "");
+		var loanAmount = vehiclePrice - downPaymentAmount;
+		var monthlyInterestRate = annualInterestRate / 1200;
+
+
+		function calcPayment(monthlyInterestRate, numMonths, loanAmount)
+		{
+			var base = Math.pow(1 + monthlyInterestRate, numMonths);
+			var payment = loanAmount * monthlyInterestRate / (1-(1/base));
+			return (payment.toFixed(2))
+		}
+	</script>
+
+</head>
+<body style="background-color: rgb(210,180,140)">
+	<h1><strong>Loan Calculator</strong></h1>
+	<pre>
+	<script type="text/javascript">
+		document.write("<br>");
+		document.write("<br>" + "Vehicle price: " + "$" + vehiclePrice.toFixed(2));
+		document.write("<br>" + "Down payment: " + "$" + downPaymentAmount.toFixed(2));
+		document.write("<br>" + "Interest Rate: " + annualInterestRate  + "%");
+		document.write("<br>" + "Loan Amount: " + "$" + loanAmount.toFixed(2));
+		document.write("<br>");
+		document.write("<br>" + "# of months" + "          "+ "Payment/month" );
+		document.write("<br>");
+
+		for( let year = 2; year <6; year++) {
+			document.write("<br>" + "     " + (year*12).toString() +  "               " + " $" + calcPayment(monthlyInterestRate, year*12, loanAmount));
+		}
+		
+	</script>
+	</pre>
+</body>
+</html>
