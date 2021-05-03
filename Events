@@ -1,0 +1,78 @@
+<!-- Author: Jason Strang
+StartDate: -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 10 Assignment</title>
+	<h1>Event Handlers at Work!</h1>
+	<h3>By Jason Strang</h3>
+
+	<p>a. <a href="#" id="search" onmouseover="color1()" onmouseout="color2()" onclick="goToSite()" >Search Here</a></p>
+
+	<p>b. <button onclick="handleClick()" id="alert">Click Me!</button></p>
+	<p>c. <button onclick="reloadPage()" id="reload">Reload</button></p>
+	<p>d. My name is <input type="text" value="Sam" id="name" onchange="clickAnywhere();nameChange()"> Go ahead, change my name.</p>
+	<p>e. <button onclick="newSiteWindow()" id="favorite">My Favorite Site</button></p>
+	
+
+	
+
+	
+
+	
+
+
+
+
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var webPage1 = "http://www.google.com/"
+		var webPage2 = "http://www.ign.com/"
+
+		document.getElementById("search").addEventListner('mouseover', color1, false);
+		document.getElementById("search").addEventListner('mouseout', color2, false);
+		document.getElementById("search").addEventListner('click', goToSite, false);
+		document.getElementById("alert").addEventListner('click', handleClick, false);
+		document.getElementById("name").addEventListner('click', nameChange, false);
+		document.getElementById("name").addEventListner('mousedown', clickAnywhere, false);
+		document.getElementById("reload").addEventListner('click', reloadPage, false);
+		document.getElementById("favorite").addEventListner('click', newSiteWindow, false);
+
+		function goToSite(){
+			window.location = webPage1;
+		}
+		function color1(){
+			document.body.style.background = "rgb(0,105,0)";}
+
+		function color2(){
+			document.body.style.background = "rgb(255,255,255)";
+		}
+		
+		function handleClick(){
+			alert("You clicked the button!");
+		}
+		function reloadPage(){
+			document.location.reload(true);
+		}
+		function nameChange() {
+			var input = document.getElementById("name");
+			name=input.value
+		}
+		function clickAnywhere(){
+			nameChange();
+			alert("Name was changed to " + name);
+
+		}
+
+
+		function newSiteWindow(){
+			window.open(webPage2);
+		}
+
+
+	</script>
+</body>
+</html>
