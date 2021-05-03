@@ -1,0 +1,84 @@
+<!-- Author: Jason Strang
+StartDate: -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 6 Assignment 1</title>
+
+	<script type="text/javascript">
+
+		var grade1= prompt("Please enter a grade. ", "");
+		var grade2 = prompt("Please enter a grade. ", "");
+		var grade3 = prompt("Please enter a grade. ", "");
+		var gradeAmount = 3;
+		var averageGrade = parseInt((parseInt(grade1) + parseInt(grade2) + parseInt(grade3)) / gradeAmount);
+		var courseGrade = "";
+
+
+
+
+	
+		if(averageGrade >=91 &&  averageGrade <=100)
+		{
+		 	courseGrade = "A";
+		}
+		else if(averageGrade>=81 &&  averageGrade<=90)
+		{
+		 	courseGrade = "B";
+		}
+		else if(averageGrade>=71 &&  averageGrade<=80)
+		{
+		 	courseGrade = "C";
+		}
+		else if(averageGrade>=61 &&  averageGrade<=70)
+		{
+		 	courseGrade = "D";
+		}
+		else if(averageGrade<=60)
+		{
+		 	courseGrade = "F"; 
+		}
+
+		switch(courseGrade)
+		{
+		 	case"A":
+				message = "Great job, keep it up";
+				break;
+			case"B":
+				message = "Very nice work";
+				break;
+			case"C":
+				message = "You can do it, keep studying";
+				break;
+			case"D":
+				message = "You need some help, see the teacher";
+				break;
+			case"F":
+				message = "Please schedule an appointment with your advisor";
+				break;
+			default:
+				message = "There is an error";
+		}
+
+
+
+
+
+	</script>
+
+</head>
+<body style="background-color: rgb(255, 192, 203)">
+	<script type="text/javascript">
+		document.write("Your " + gradeAmount + " exam scores are: ");
+		document.write("<br>" + "Exam 1 " + grade1);
+		document.write("<br>" + "Exam 2 " + grade2);
+		document.write("<br>" + "Exam 3 " + grade3);
+		document.write("<br>" + "Average: " + Math.round(averageGrade));
+		document.write("<br>" + "Course grade: " + courseGrade);
+		document.write("<br>" + message);
+
+
+	</script>
+</body>
+</html>
