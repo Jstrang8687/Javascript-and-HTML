@@ -1,0 +1,76 @@
+<!-- Author: Jason Strang
+StartDate: -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 8 Assignment</title>
+	<h1>Browser Setting:</h1>
+	<p id="type"></p>
+
+</head>
+<body style="background-color:rgb(143,0,255)">
+	<script type="text/javascript">
+		if(navigator.javaEnabled())
+		{
+			document.write("Java is Enabled<br>");
+		}
+		else
+		{
+			document.write("Java is Disabled<br>");
+		}
+		document.write("Browser platform: " + navigator.platform + "<br>");
+		document.write("Browser code name: " + navigator.appCodeName + "<br>");
+		document.write("Browser name: " + navigator.appName + "<br>");
+		document.write("Browser version: " + navigator.appVersion + "<br>");
+		document.write("<br>");
+
+		var name = prompt("What is your name? ", "");
+		var age = prompt("What is your age? ", "");
+		var gender = prompt("what is your gender? ", "");
+		var result = gender.toUpperCase();
+		var life_expect = 0;
+
+
+
+		function Person(name, age, gender)
+		{
+		 	this.name = name;
+			this.age = age;
+		 	this.gender = result;
+		 	this.life_expect = getYearsLeft();
+		  	this.describe = function()
+		 	{
+			 	document.write("Person's Properties: <br>");
+				document.write(this.name + "<br>");
+				document.write(this.age + "<br>");
+				document.write(this.gender + "<br>");
+				document.write(this.life_expect + "<br>");
+				document.write("Hi " + this.name + ", as a " + this.age + " year old you are expected to live " + this.life_expect  + " more years!");
+			}
+
+		}
+		
+		function getYearsLeft()
+		 	{
+		 		var maleAge = 76;
+				var femaleAge = 81;
+		 		if(result == 'M')
+				{
+					return this.life_expect = maleAge - this.age;
+				}
+				else if(result == 'F')
+				{
+					return this.life_expect = femaleAge - this.age;
+				}
+			}
+			
+		var myPerson = new Person(name, age, gender, life_expect);
+		myPerson.describe();
+			
+		
+		
+
+	</script>
+</body>
+</html>
