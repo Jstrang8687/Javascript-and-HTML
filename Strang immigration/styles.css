@@ -1,0 +1,20 @@
+.globe{
+    animation-name: roll; /*link to @keyframe drive*/
+    animation-duration: 4s;
+    animation-timing-function:cubic-bezier(0.6, -0.28, 0.735, 0.045);  /*start slow and accelerate*/
+    animation-iteration-count: 1; /*times it will run*/
+    animation-delay: 1s; /*delays start */
+    animation-fill-mode: both; 
+}
+@keyframes roll{
+    0%{
+        transform: translateX(100px) rotate(0turn); 
+    }
+    20%{
+        transform: translateX(-1000px) rotate(-0.5turn); 
+    }
+    100%{
+        transform: translateX(100px) rotate(2turn); 
+    }
+}/*end of keyframe roll*/
+
