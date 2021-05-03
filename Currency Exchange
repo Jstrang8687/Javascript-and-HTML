@@ -1,0 +1,42 @@
+<!-- Author: Jason Strang
+Course: IST 239
+StartDate: 3/31/21-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chapter 5 Assignment</title>
+<script type="text/javascript">
+var usaAmount = parseFloat(prompt("How much money do you want to convert? ", ""));
+var mexicanPeso = .048;
+var canadianDollars= .79;
+var singaporeDollar = .74;
+var australianDollar = .75;
+var britishPound = 1.37;
+var mexicoFlag = '<img src="images/mexicoFlag.png" alt="Mexico Flag" style="width:30px; height:20px;">';
+var canadaFlag = '<img src="images/canadaFlag.png" alt="Canadian Flag" style="width:30px; height:20px;">';
+var singaporeFlag = '<img src="images/singaporeFlag.png" alt="Singapore Flag" style="width:30px; height:20px;">';
+var australianFlag = '<img src="images/australianFlag.png" alt="Australian Flag" style="width:30px; height:20px;">';
+var britishFlag = '<img src="images/britishFlag.png" alt="British Flag" style="width:30px; height:20px;">';
+document.write("$"+ usaAmount + " in U.S. Currency is approximately equivalent to: ");
+
+function output(dollar, exchangeType, abreviation, currency, flag){
+     document.write("<br>" + calcExchange(dollar, exchangeType).toFixed(2) + " " + abreviation + " " + currency + flag);
+}
+
+function calcExchange(usd, exch){
+     var conversionAmount = usd/exch;
+     return conversionAmount;
+}
+</script>
+</head>
+<body style="background-color: rgb(255, 136, 71)">
+<script type="text/javascript">
+output(usaAmount, mexicanPeso, "MXN", " (Mexican Pesos)", mexicoFlag);
+output(usaAmount, canadianDollars, "CAD", "(Canadian Dollars)", canadaFlag);
+output(usaAmount, singaporeDollar, "SGD", "(Singapore Dollars)", singaporeFlag);
+output(usaAmount, australianDollar, "AUD", "(Australian Dollars)", australianFlag);
+output(usaAmount, britishPound, "GBP", "(British Pound)", britishFlag);
+</script>
+</body>
+</html>
