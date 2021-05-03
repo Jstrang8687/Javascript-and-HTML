@@ -1,0 +1,50 @@
+<!-- Author: Jason Strang
+StartDate: -->
+<!DOCTYPE html>
+<html>
+<head>
+	<p id="demo"></p>
+	<meta charset="UTF-8">
+	<title>Chapter 7 Assignment</title>
+	<script type="text/javascript">
+		var books = ["War and Peace", "Huckleberry Finn", "The Return of the Native", "A Christmas Carol", "Exodus"];
+		var authors = [];
+		
+
+		document.write("<br>****************************************************************************************<br>");
+		for(var i=0; i< books.length; i++){
+			authors.push(prompt("Who is the author of " + books[i] + "?", ""));
+		}
+		for(var i=0; i< books.length; i++){
+			document.write("<strong>Books: </strong>" + books[i] +  "     " + "<strong>Authors: </strong>" + authors[i] + "<br>");
+		}
+	
+
+		document.write("<br>****************************************************************************************<br>");
+		var author_title = [];
+		for(var i=0; i< books.length; i++) {
+			author_title.push(authors[i] + " wrote " + books[i]);
+			document.write(authors[i] + " wrote " + books[i] + "<br>")
+		}
+		document.write("<br>****************************************************************************************<br>");
+
+		author_title.pop();
+		for(var i=0; i< author_title.length; i++){
+			document.write(author_title[i] + "<br>");
+		}
+
+		document.write("<br>****************************************************************************************<br>");
+		author_title.sort();
+		for(var i=0; i< author_title.length; i++){
+			document.write(author_title[i] + "<br>");
+		}
+		document.write("<br>****************************************************************************************<br>");
+
+
+		
+	</script>
+
+</head>
+<body>
+</body>
+</html>
