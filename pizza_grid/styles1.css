@@ -1,0 +1,121 @@
+img{
+    width: 100%;
+}
+figure{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(0, 0, 128); /*navy*/
+}
+main{
+    background-color: rgb(173, 216, 230); /*light blue*/
+    margin: 0 auto;
+    margin-top: 215px;
+    width: 97%;
+    text-align: center;
+}
+header{
+    min-height: 100vh;
+    padding: 15px;
+}
+nav{
+    position: fixed;
+    top: 0px;
+    width: 97%;
+    background-color: rgb(0, 0, 128); /*navy*/
+    margin-left: 0;
+}
+nav ul{
+    padding-left: 5px;
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    padding: 10px 10px;
+    background-color: rgb(255, 255, 255); /*white*/
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+}
+nav ul li a:link{
+    color: rgb(0, 0, 128); /*navy*/
+}
+nav ul li a:visited{
+    color: rgb(0, 128, 0); /*green*/
+}
+nav ul li a:hover{
+    background-color: rgb(128, 128, 128); /*gray*/
+    color: rgb(255, 255, 255); /*white*/
+}
+section{
+    min-height: 100vh;
+    padding: 215px 10px 0 10px; /*215 top, 10 right, 0 bottom, 10 left*/
+}
+section:nth-child(even){
+    background-color: rgb(255, 255, 255); /*white*/
+}
+form{
+    text-align: left;
+}
+textarea{
+    width: 95%;
+    max-width: 600px;
+    height: 400px;
+}
+footer{
+    background-color: rgb(255, 255, 255);
+}
+footer ul{
+    list-style-type: none;
+}
+@media  screen and (min-width: 400px) {
+    main{
+        margin: 80px auto;
+    }
+    nav{
+        width: 100%;
+        height: 80px;
+    }
+    nav ul{
+        display: flex;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    header article{
+         width: 50%;
+    }
+    header figure{
+        width: 45%;
+    }
+    header figure img{      <-- we add this selector so we can make the logo round
+       border-radius: 50%
+    }
+    section{
+       padding: 80px 10px 0 10px;
+    }
+    #about{
+        display: flex;
+        justify-content: space-between;
+    }
+    #about article{
+        width: 50%;
+    }
+     #about figure{
+        width: 45%;
+        margin-top: 20px
+    }
+    .grid_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* two equal width columns*/
+        grid-gap: 10px;        /*places a 10px gap between each article.*/
+    }/*end of 400px*/  
+@media screen and (min-width: 800px) {
+
+    .grid_container{
+            grid-template-columns: 1fr 1fr 1fr;
+      }
+ }/*end of 800px*/
+}
