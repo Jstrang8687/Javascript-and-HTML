@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Chapter 1 Assignment</title
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="styles.css">
+		<script>
+			var today = new Date();
+		</script>
+</head>
+
+<body style="background-color: rgb(255, 140, 0)"> <!-- Dark Orange -->
+
+	<script>
+		document.write("This text was written with JavaScript on" + " 03/19/2021");
+	</script>
+
+	<p>
+			<h1>My Name is: Jason Strang</h1>
+	</p>
+
+	<p>
+			Here is a little information about me:<br>
+			I worked my way up to Executive Chef in the Hospitality Industry for 18 years.
+			During the pandemic, life took a twist and I decided to go get my second degree
+			in Computer Technology, more specifically Programming. I am not sure where this
+			will take me but its pretty fun. I enjoy playing video games, which is why I 
+			chose to do this, sports, family time, visiting the world. I grew up in 
+			Charleston so its awesome to see how its grown in the tech field and I can't 
+			wait to be be apart of it!
+	</p>
+
+	<section>
+		<section class="special">
+		<article>
+		<h2>Family</h2>
+		<div class="img-wrap"><img src="images/Pumpkin.jpg"  alt="Strang Family at pumpkin patch"></div>
+		</article>
+	</section>
+
+
+
+</body>
+</html>
